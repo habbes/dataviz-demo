@@ -1,0 +1,16 @@
+<div class="row" ng-controller="CollectionsIndexController">
+    <div class="col-md-12">
+        <h1>Collections</h1>
+        <a class="btn btn-success" ui-sref="newCollection"><i class="fa fa-plus"></i> New Collection</a>
+       
+        <div  ng-repeat="collection in collections">
+            <h3>{{collection.name}}</h3>
+            <a class="btn btn-default"
+                ui-sref="stats({collectionId: collection._id})">
+                <i class="fa fa-line-chart"></i> View Stats
+            </a>
+            <hr>
+        </div>
+        
+    </div>        
+</div>

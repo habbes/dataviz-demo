@@ -1,0 +1,38 @@
+<div class="row" ng-controller="StatsController">
+    <div class="col-md-12">
+        <h2>{{ collection.name }}</h2>
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Summary
+                </div>
+                <div class="panel-body">
+                    Average: <b>{{ collection.mean }}</b><br>
+                    Median: <b>{{ collection.median}}</b><br>
+                    Sum: <b>{{ collection.sum }}</b><br>
+                </div>
+            </div>            
+        </div>
+        <div class="col-md-8">
+            <h3>Charts</h3>
+            <div>
+                <canvas id="line" class="chart chart-line" chart-data="data"
+                chart-labels="collection.labels" chart-series="series" chart-options="options"
+                chart-dataset-override="datasetOverride" chart-click="onClick">
+                </canvas> 
+            </div>
+            <hr>
+            <div>
+                <canvas id="bar" class="chart chart-bar"
+                    chart-data="data" chart-labels="collection.labels" chart-series="series">
+                </canvas>
+            </div>
+            <hr>
+            <canvas id="pie" class="chart chart-pie"
+                chart-data="data" chart-labels="collection.labels" chart-options="options">
+            </canvas> 
+        </div>
+
+    </div>
+</div>
