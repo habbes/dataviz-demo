@@ -11,7 +11,7 @@ var collections = require('./routes/collections');
 
 var app = express();
 
-var mongoUri = process.env.MONGODB_URL || 'mongodb://localhost/dataviz';
+var mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/dataviz';
 mongoose.connect(mongoUri);
 
 // uncomment after placing your favicon in /public
