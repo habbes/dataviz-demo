@@ -1,6 +1,9 @@
 {
   "name": "dataviz",
   "version": "0.0.0",
+  "engines": {
+    "node": "5.5.0"
+  },
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
@@ -8,6 +11,7 @@
   },
   "dependencies": {
     "body-parser": "~1.13.2",
+    "bower": "^1.7.9",
     "bower-npm-resolver": "^0.4.0",
     "cookie-parser": "~1.3.5",
     "csv-parser": "^1.9.3",
